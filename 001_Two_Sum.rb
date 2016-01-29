@@ -4,7 +4,8 @@
 def two_sum(nums, target)
     h = {}
 	nums.each_with_index do |n,i|
-		return [ h[target-n]+1 , i+1 ] if h[target-n]
+		t = h[target-n]
+		return [ t+1 , i+1 ] if t
 		h[n] = i
 	end
 end
